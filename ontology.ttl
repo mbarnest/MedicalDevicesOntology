@@ -1,0 +1,1253 @@
+@prefix : <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology#> .
+
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology> rdf:type owl:Ontology ;
+                                                                      <http://purl.org/dc/terms/description> "This ontology includes medical devices, catalogued within the regulatory frameworks European MDR (EU 2017/745) and IVDR (EU 2017/746). Its purpose is to represent medical devices, their manufacturers, risks, incidents and corrective actions."@en ;
+                                                                      <http://purl.org/dc/terms/title> "Medical Devices Ontology"@en ,
+                                                                                                       "Miguel Ángel Barnés Torrente"@en ;
+                                                                      rdfs:comment "Ontology for incidents, risk and actions related to medical devices."@en ;
+                                                                      rdfs:label "Medical Devices Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
+                                       rdfs:range xsd:string .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/addressesIncident
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/addressesIncident> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                                       rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                       rdfs:comment "Relates a Field Safety Corrective Action (FSCA) to the specific incident it aims to mitigate or resolve."@en ;
+                                                                                       rdfs:label "addresses incident"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/affectsDeviceType
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/affectsDeviceType> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                       rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                       rdfs:comment "Relates a risk or incident to the specific category or type of medical device that is impacted."@en ;
+                                                                                       rdfs:label "affected device type"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/countries_affected
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/countries_affected> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                                        rdfs:range <http://schema.org/AdministrativeArea> ;
+                                                                                        rdfs:comment "Relates a Field Safety Corrective Action (FSCA) to the specific countries where the action is being implemented."@en ;
+                                                                                        rdfs:label "countries affected"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/country_reported
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/country_reported> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                      rdfs:range <http://schema.org/Country> ;
+                                                                                      rdfs:comment "The specific country where an incident was officially identified and reported to the authorities."@en ;
+                                                                                      rdfs:label "country reported"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasCountry
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasCountry> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                                                                rdfs:range <http://schema.org/Country> ;
+                                                                                rdfs:comment "Links a manufacturer or an incident report to the specific country or geographical region involved."@en ;
+                                                                                rdfs:label "has country"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasManufacturer
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasManufacturer> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                     rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                                                                     rdfs:comment "The relationship between a medical device and the legal entity responsible for its design and production."@en ;
+                                                                                     rdfs:label "has manufacturer"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasProbability
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasProbability> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                    rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Probability> ;
+                                                                                    rdfs:comment "Links a specific Risk to its estimated likelihood of occurrence (e.g., Low, Medium, High)."@en ;
+                                                                                    rdfs:label "has probability"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRegulatoryFramework
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRegulatoryFramework> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                            rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RegulatoryFramework> ;
+                                                                                            rdfs:comment "Associates a medical device with its applicable legal framework, such as MDR or IVDR."@en ;
+                                                                                            rdfs:label "has regulatory framework"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRisk> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                             rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                             rdfs:comment "Associates a medical device with a potential hazard or risk identified during its lifecycle."@en ;
+                                                                             rdfs:label "has risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRiskCategory
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRiskCategory> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                     rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> ;
+                                                                                     rdfs:comment "Classifies a Risk into a specific functional category, such as Device Failure or Patient Harm."@en ;
+                                                                                     rdfs:label "has risk category"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRiskClass
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRiskClass> rdf:type owl:ObjectProperty ,
+                                                                                           owl:FunctionalProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                  rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass> ;
+                                                                                  rdfs:comment "Connects a device to its regulatory risk classification."@en ;
+                                                                                  rdfs:label "has risk class"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasSeverity
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasSeverity> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                 rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Severity> ;
+                                                                                 rdfs:comment "Relates a Risk to the magnitude of its potential consequences or impact on health."@en ;
+                                                                                 rdfs:label "has severity"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasStatus
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasStatus> rdf:type owl:ObjectProperty ,
+                                                                                        owl:FunctionalProperty ;
+                                                                               rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                               rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Status> ;
+                                                                               rdfs:comment "Indicates the current stage of a Field Safety Corrective Action, such as Open, Closed, or Pending."@en ;
+                                                                               rdfs:label "has status"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/involvesDevice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/involvesDevice> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                    rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                    rdfs:comment "Links a safety incident or a corrective action to the physical medical device involved in the event."@en ;
+                                                                                    rdfs:label "involves device"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/regulatedBy
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/regulatedBy> rdf:type owl:ObjectProperty ,
+                                                                                          owl:FunctionalProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                                                                 rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CompetentAuthority> ;
+                                                                                 rdfs:comment "Relates a medical device or manufacturer to the specific regulatory framework (MDR/IVDR) it must comply with."@en ;
+                                                                                 rdfs:label "regulated by"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportedBy
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportedBy> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                rdfs:range <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                                                                rdfs:comment "Relates an Incident to the manufacturer or entity responsible for submitting the official safety report."@en ;
+                                                                                rdfs:label "reported by"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ,
+                                                   <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ,
+                                                   <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ,
+                                                  <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ,
+                                                  <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ,
+                                                  <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "A identifier for the resource."@en ;
+                                      rdfs:isDefinedBy "http://purl.org/dc/terms/" ;
+                                      rdfs:label "Identifier"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/action_date
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/action_date> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/date> ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                                 rdfs:range xsd:dateTime ;
+                                                                                 rdfs:comment "The date when the Field Safety Corrective Action was initiated or performed."@en ;
+                                                                                 rdfs:label "action date"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/authorization_number
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/authorization_number> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                                                                          rdfs:range xsd:string ;
+                                                                                          rdfs:comment "The authorization number assigned to the manufacturer."@en ;
+                                                                                          rdfs:label "authorization number"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/closure_date
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/closure_date> rdf:type owl:DatatypeProperty ;
+                                                                                  rdfs:subPropertyOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/date> ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                                  rdfs:range xsd:dateTime ;
+                                                                                  rdfs:comment "The date when the Field Safety Corrective Action was closed."@en ;
+                                                                                  rdfs:label "closure date"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/corrective_action_taken
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/corrective_action_taken> rdf:type owl:DatatypeProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                             rdfs:range xsd:boolean ;
+                                                                                             rdfs:comment "Tells if a corrective action has been implemented."@en ;
+                                                                                             rdfs:label "corrective action taken"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/date
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/date> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:range xsd:dateTime ;
+                                                                          rdfs:comment "A general date."@en ;
+                                                                          rdfs:label "date"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/detectionDate
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/detectionDate> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/date> ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                   rdfs:range xsd:dateTime ;
+                                                                                   rdfs:comment "The date when the device malfunction was detected."@en ;
+                                                                                   rdfs:label "detection date"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/devices_affected
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/devices_affected> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                                      rdfs:range xsd:integer ;
+                                                                                      rdfs:comment "Number of devices affected by an incident."@en ;
+                                                                                      rdfs:label "devices affected"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eudamed_srn
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eudamed_srn> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                                                                 rdfs:range xsd:string ;
+                                                                                 rdfs:comment "The number assigned to the manufacturer in the EUDAMED database."@en ;
+                                                                                 rdfs:label "eudamed srn"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eventDate
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eventDate> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:subPropertyOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/date> ;
+                                                                               rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                               rdfs:range xsd:dateTime ;
+                                                                               rdfs:comment "The date when the incident occurred."@en ;
+                                                                               rdfs:label "event date"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/intended_purpose
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/intended_purpose> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                      rdfs:range xsd:string ;
+                                                                                      rdfs:comment "The use intended for a device."@en ;
+                                                                                      rdfs:label "intended purpose"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_active
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_active> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                               rdfs:range xsd:boolean ;
+                                                                               rdfs:comment "Tells if the device depends on a source of power."@en ;
+                                                                               rdfs:label "is active"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_implantable
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_implantable> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                    rdfs:range xsd:boolean ;
+                                                                                    rdfs:comment "Tells if the device is intended to be into the human body."@en ;
+                                                                                    rdfs:label "is implantable"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_ivd
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_ivd> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                            rdfs:range xsd:boolean ;
+                                                                            rdfs:comment "Tells if the device is intended for in vitro diagnostic."@en ;
+                                                                            rdfs:label "is in vitro diagnostic"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_reusable
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_reusable> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                 rdfs:range xsd:boolean ;
+                                                                                 rdfs:comment "Tells if the device is intended to be reused."@en ;
+                                                                                 rdfs:label "is reusable"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/outcome
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/outcome> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                             rdfs:range xsd:string ;
+                                                                             rdfs:comment "The result of an incident."@en ;
+                                                                             rdfs:label "outcome"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_age
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_age> rdf:type owl:DatatypeProperty ,
+                                                                                          owl:FunctionalProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                 rdfs:range xsd:integer ;
+                                                                                 rdfs:comment "The age of the patient."@en ;
+                                                                                 rdfs:label "patient age"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_sex
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_sex> rdf:type owl:DatatypeProperty ,
+                                                                                          owl:FunctionalProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                 rdfs:range xsd:string ;
+                                                                                 rdfs:comment "The sex of the patient."@en ;
+                                                                                 rdfs:label "patient sex"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportDate
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportDate> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:subPropertyOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/date> ;
+                                                                                rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                                rdfs:range xsd:dateTime ;
+                                                                                rdfs:comment "The date when the incident was reported."@en ;
+                                                                                rdfs:label "report date"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/risk_name
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/risk_name> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                               rdfs:range xsd:string ;
+                                                                               rdfs:comment "The name of the risk."@en ;
+                                                                               rdfs:label "risk name"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/scope
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/scope> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                           rdfs:range xsd:string ;
+                                                                           rdfs:comment "The range actions in a Field Safety Corrective Action."@en ;
+                                                                           rdfs:label "scope"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/udi_di
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/udi_di> rdf:type owl:DatatypeProperty ,
+                                                                                     owl:FunctionalProperty ;
+                                                                            rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                            rdfs:range xsd:string ;
+                                                                            rdfs:comment "A device identifier."@en ;
+                                                                            rdfs:label "udi di"@en .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "A email address."@en ;
+                                 rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+                                 rdfs:label "Email Address"@en .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ,
+                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "A name for an entity."@en ;
+                                 rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+                                 rdfs:label "Name"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Action
+<http://schema.org/Action> rdf:type owl:Class ;
+                           rdfs:comment "An action performed by an individual."@en ;
+                           rdfs:isDefinedBy "http://schema.org/" ;
+                           rdfs:label "Action"@en .
+
+
+###  http://schema.org/ActionStatusType
+<http://schema.org/ActionStatusType> rdf:type owl:Class ;
+                                     rdfs:comment "The specific status of an action."@en ;
+                                     rdfs:isDefinedBy "http://schema.org/" ;
+                                     rdfs:label "Action Status Type"@en .
+
+
+###  http://schema.org/AdministrativeArea
+<http://schema.org/AdministrativeArea> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://schema.org/Place> ;
+                                       rdfs:comment "A geographical region under the jurisdiction of a government."@en ;
+                                       rdfs:isDefinedBy "http://schema.org/" ;
+                                       rdfs:label "Administrative Area"@en .
+
+
+###  http://schema.org/Country
+<http://schema.org/Country> rdf:type owl:Class ;
+                            rdfs:subClassOf <http://schema.org/AdministrativeArea> ;
+                            rdfs:comment "A distinct nation with its own government."@en ;
+                            rdfs:isDefinedBy "http://schema.org/" ;
+                            rdfs:label "Country"@en .
+
+
+###  http://schema.org/Event
+<http://schema.org/Event> rdf:type owl:Class ;
+                          rdfs:comment "An event happening at a certain time and location."@en ;
+                          rdfs:isDefinedBy "http://schema.org/" ;
+                          rdfs:label "Event"@en .
+
+
+###  http://schema.org/Legislation
+<http://schema.org/Legislation> rdf:type owl:Class ;
+                                rdfs:comment "A set of laws."@en ;
+                                rdfs:isDefinedBy "http://schema.org/" ;
+                                rdfs:label "Legislation"@en .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class ;
+                                 rdfs:comment "A public or private organization."@en ;
+                                 rdfs:isDefinedBy "http://schema.org/" ;
+                                 rdfs:label "Organization"@en .
+
+
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class ;
+                          rdfs:comment "A physical location."@en ;
+                          rdfs:isDefinedBy "http://schema.org/" ;
+                          rdfs:label "Place"@en .
+
+
+###  http://schema.org/Product
+<http://schema.org/Product> rdf:type owl:Class ;
+                            rdfs:comment "Any offered product, service, or manufactured good."@en ;
+                            rdfs:isDefinedBy "http://schema.org/" ;
+                            rdfs:label "Product"@en .
+
+
+###  http://schema.org/QualitativeValue
+<http://schema.org/QualitativeValue> rdf:type owl:Class ;
+                                     rdfs:comment "A predefined qualitative value for a characteristic."@en ;
+                                     rdfs:isDefinedBy "http://schema.org/" ;
+                                     rdfs:label "Qualitative Value"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ActiveDevice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ActiveDevice> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                  rdfs:comment "A device that relies on a source of electrical energy."@en ;
+                                                                                  rdfs:label "Active Device"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ActiveImplant
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ActiveImplant> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                   rdfs:comment "An active device that is also implantable."@en ;
+                                                                                   rdfs:label "Active Implant"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CibersecurityRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CibersecurityRisk> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                       rdfs:comment "Risk associated with vulnerabilities in the network or software of a medical device that could lead to unauthorized access or malfunction."@en ;
+                                                                                       rdfs:label "Cybersecurity Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassC
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassC> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass> ;
+                                                                            rdfs:comment "High individual risk and/or moderate public health risk in vitro diagnostic devices, such as those used for genetic testing or cancer screening."@en ;
+                                                                            rdfs:label "Class C"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassD
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassD> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass> ;
+                                                                            rdfs:comment "High individual risk and high public health risk in vitro diagnostic devices, typically used for detecting life-threatening infectious diseases in blood supply."@en ;
+                                                                            rdfs:label "Class D"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIIa
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIIa> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass> ;
+                                                                              rdfs:comment "Medium-risk medical devices, including some diagnostic and therapeutic tools, that require a moderate level of monitoring and certification."@en ;
+                                                                              rdfs:label "Class IIa"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIIb
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIIb> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass> ;
+                                                                              rdfs:comment "Medium-high risk medical devices, often including more complex implants or long-term invasive devices, subject to stricter assessment."@en ;
+                                                                              rdfs:label "Class IIb"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CompetentAuthority
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CompetentAuthority> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://schema.org/Organization> ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/regulatedBy> ;
+                                                                                                          owl:allValuesFrom <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CompetentAuthority>
+                                                                                                        ] ;
+                                                                                        rdfs:comment "The national body responsible for the registration and supervision of medical devices and manufacturers within its jurisdiction."@en ;
+                                                                                        rdfs:label "Competent Authority"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ContaminationRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ContaminationRisk> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                       rdfs:comment "Risk of biological, chemical, or particulate contamination that may affect the safety or performance of the device."@en ;
+                                                                                       rdfs:label "Contamination Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://schema.org/Product> ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/intended_purpose> ;
+                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onDataRange xsd:string
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_active> ;
+                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onDataRange xsd:boolean
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_implantable> ;
+                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onDataRange xsd:boolean
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_ivd> ;
+                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onDataRange xsd:boolean
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_reusable> ;
+                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onDataRange xsd:boolean
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/udi_di> ;
+                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onDataRange xsd:string
+                                                                                            ] ;
+                                                                            rdfs:comment "A medical device."@en ;
+                                                                            rdfs:label "Device"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DeviceFailure
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DeviceFailure> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> ;
+                                                                                   rdfs:comment "A category of risk where the device fails to perform its intended function or meet its specifications."@en ;
+                                                                                   rdfs:label "Device Failure"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DevicePerformance
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DevicePerformance> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> ;
+                                                                                       rdfs:comment "Risk related to the effectiveness or functional output of the device compared to its intended use."@en ;
+                                                                                       rdfs:label "Device Performance"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DeviceSafety
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DeviceSafety> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> ;
+                                                                                  rdfs:comment "Risk category focusing on the potential for the device to cause physical harm or injury during normal use."@en ;
+                                                                                  rdfs:label "Device Safety"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DiagnosticError
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DiagnosticError> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> ;
+                                                                                     rdfs:comment "Risk arising from incorrect or misleading diagnostic information provided by the device."@en ;
+                                                                                     rdfs:label "Diagnostic Error"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DiagnosticRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DiagnosticRisk> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                    rdfs:comment "Risk related to incorrect or delayed results from diagnostic devices that may lead to inappropriate medical decisions."@en ;
+                                                                                    rdfs:label "Diagnostic Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://schema.org/Action> ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasStatus> ;
+                                                                                            owl:someValuesFrom <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Status>
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.org/dc/terms/description> ;
+                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:string
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.org/dc/terms/identifier> ;
+                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:string
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/action_date> ;
+                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:dateTime
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/devices_affected> ;
+                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:integer
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/outcome> ;
+                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:string
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/closure_date> ;
+                                                                                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:dateTime
+                                                                                          ] ;
+                                                                          rdfs:comment "Corrective action taken by a manufacturer for technical or medical reasons to prevent or reduce the risk of a serious incident."@en ;
+                                                                          rdfs:label "Field Safety Corrective Action"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/IVDR
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/IVDR> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RegulatoryFramework> ;
+                                                                          owl:disjointWith <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableDevice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableDevice> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                       rdfs:comment "A device intended to be totally introduced into the human body."@en ;
+                                                                                       rdfs:label "Implantable Device"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InSituCorrection
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InSituCorrection> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                                      rdfs:comment "A corrective action performed on the device at the location where it is used, without the need for its return to the manufacturer."@en ;
+                                                                                      rdfs:label "In-Situ Correction"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InVitroDiagnosticDevice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InVitroDiagnosticDevice> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                             rdfs:comment "A device used in vitro for the examination of specimens."@en ;
+                                                                                             rdfs:label "In Vitro Diagnostic Device"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://schema.org/Event> ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://purl.org/dc/terms/description> ;
+                                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:string
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://purl.org/dc/terms/identifier> ;
+                                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:string
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/corrective_action_taken> ;
+                                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:boolean
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/detectionDate> ;
+                                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:dateTime
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eventDate> ;
+                                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:dateTime
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/outcome> ;
+                                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:string
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportDate> ;
+                                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:dateTime
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_age> ;
+                                                                                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:integer
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_sex> ;
+                                                                                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                owl:onDataRange xsd:string
+                                                                                              ] ;
+                                                                              rdfs:comment "Any malfunction or deterioration in the characteristics or performance of a device made available on the market.e"@en ;
+                                                                              rdfs:label "Incident"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InfectionRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InfectionRisk> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                   rdfs:comment "Risk of clinical infection to the patient or user resulting from the use or contamination of the device."@en ;
+                                                                                   rdfs:label "Infection Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InjuryRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InjuryRisk> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InterferenceRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InterferenceRisk> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                      rdfs:comment "Risk that the device's function is disrupted by external factors, such as electromagnetic fields."@en ;
+                                                                                      rdfs:label "Interference Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RegulatoryFramework> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MalfunctionRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MalfunctionRisk> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                     rdfs:comment "Risk that the device does not operate as intended due to internal technical defects or software errors."@en ;
+                                                                                     rdfs:label "Malfunction Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://schema.org/Organization> ,
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/regulatedBy> ;
+                                                                                                    owl:allValuesFrom <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CompetentAuthority>
+                                                                                                  ] ,
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/authorization_number> ;
+                                                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                    owl:onDataRange xsd:string
+                                                                                                  ] ,
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eudamed_srn> ;
+                                                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                    owl:onDataRange xsd:string
+                                                                                                  ] ,
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://xmlns.com/foaf/0.1/mbox> ;
+                                                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                    owl:onDataRange xsd:string
+                                                                                                  ] ,
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://xmlns.com/foaf/0.1/name> ;
+                                                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                    owl:onDataRange xsd:string
+                                                                                                  ] ;
+                                                                                  rdfs:comment "Natural or legal person who manufactures or fully refurbishes a device and markets it under their name or trademark."@en ;
+                                                                                  rdfs:label "Manufacturer"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MaterialRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MaterialRisk> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                  rdfs:comment "Risk associated with the materials used in the device, including toxicity, degradation, or biocompatibility issues."@en ;
+                                                                                  rdfs:label "Material Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/PatientHarm
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/PatientHarm> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> ;
+                                                                                 rdfs:comment "A specific risk category that measures the direct negative impact on a patient's health status."@en ;
+                                                                                 rdfs:label "Patient Harm"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Probability
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Probability> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://schema.org/QualitativeValue> ;
+                                                                                 rdfs:comment "The likelihood of a specific risk occurring during the use of a medical device."@en ;
+                                                                                 rdfs:label "Probability"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ProductQuality
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ProductQuality> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> ;
+                                                                                    rdfs:comment "Category of risk related to manufacturing defects, packaging failures, or lack of batch consistency."@en ;
+                                                                                    rdfs:label "Product Quality"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RadiationRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RadiationRisk> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                   rdfs:comment "Risk associated with the emission of ionizing or non-ionizing radiation from the medical device."@en ;
+                                                                                   rdfs:label "Radiation Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Recall
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Recall> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                            rdfs:comment "Any measure aimed at achieving the return of a device that has already been made available to the end user."@en ;
+                                                                            rdfs:label "Recall"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RegulatoryFramework
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RegulatoryFramework> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://schema.org/Legislation> ;
+                                                                                         rdfs:comment "The set of rules, laws, and regulations that govern the manufacturing, registration, and safety monitoring of medical devices within a specific jurisdiction, such as the European Union."@en ;
+                                                                                         rdfs:label "Regulatory Framework"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.org/dc/terms/description> ;
+                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:string
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.org/dc/terms/identifier> ;
+                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:string
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/risk_name> ;
+                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onDataRange xsd:string
+                                                                                          ] ;
+                                                                          rdfs:comment "Combination of the probability of occurrence of harm and the severity of that harm."@en ;
+                                                                          rdfs:label "Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> rdf:type owl:Class ;
+                                                                                  rdfs:comment "General classification of risk types, such as device performance, safety, or patient harm."@en ;
+                                                                                  rdfs:label "Risk Category"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass> rdf:type owl:Class ;
+                                                                               rdfs:comment "The regulatory classification assigned to a medical device based on its intended purpose and inherent risks, determining the level of oversight required."@en ;
+                                                                               rdfs:label "Risk Class"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SafetyAlert
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SafetyAlert> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                                 rdfs:comment "An alert warning a safety hazard."@en ;
+                                                                                 rdfs:label "Safety Alert"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SelfTestDevice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SelfTestDevice> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                    rdfs:comment "Device to be used at home"@en ;
+                                                                                    rdfs:label "Self Test Device"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Severity
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Severity> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://schema.org/QualitativeValue> ;
+                                                                              rdfs:comment "A measure of the possible consequences of a hazard or a specific risk."@en ;
+                                                                              rdfs:label "Severity"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SingleUseDevice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SingleUseDevice> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device> ;
+                                                                                     rdfs:comment "The device can only be used one time."@en ;
+                                                                                     rdfs:label "Single Use Device"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SoftwareRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SoftwareRisk> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk> ;
+                                                                                  rdfs:comment "Risk related to software bugs, algorithm failures, or data processing errors in active devices."@en ;
+                                                                                  rdfs:label "Software Risk"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Status
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Status> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://schema.org/ActionStatusType> ;
+                                                                            rdfs:comment "Current state of a Field Safety Corrective Action, such as Open, Closed, or Pending." ;
+                                                                            rdfs:label "Status"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/UserNotice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/UserNotice> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                                                rdfs:comment "Communication sent by a manufacturer to users or customers in relation to a Field Safety Corrective Action."@en ;
+                                                                                rdfs:label "User Notice"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Close
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Close> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Status> ;
+                                                                           rdfs:comment "Individual representing a closed status."@en ;
+                                                                           rdfs:label "Close"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Critical
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Critical> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Severity> ;
+                                                                              rdfs:comment "Individual representing a critical severity level."@en ;
+                                                                              rdfs:label "Critical"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DEV-001
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DEV-001> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/affectsDeviceType> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasManufacturer> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MAN-001> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRegulatoryFramework> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRiskClass> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII> ;
+                                                                             <http://purl.org/dc/terms/identifier> "DEV-001" ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/intended_purpose> "Ventricular assist device for end-stage heart failure" ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_active> "true"^^xsd:boolean ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_implantable> "true"^^xsd:boolean ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_ivd> "false"^^xsd:boolean ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_reusable> "false"^^xsd:boolean ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/udi_di> "(01)00380740009095" ;
+                                                                             <http://xmlns.com/foaf/0.1/name> "HeartMate 3 LVAD" ;
+                                                                             <http://purl.org/dc/terms/description> "Thrombus formation on device surface causing embolic events" ;
+                                                                             rdfs:comment "Instance of DEV-001 device"@en ;
+                                                                             rdfs:label "DEV-001"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/EU-wide
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/EU-wide> rdf:type owl:NamedIndividual ,
+                                                                                      <http://schema.org/AdministrativeArea> ;
+                                                                             rdfs:comment "Instance representing the European Union region."@en ;
+                                                                             rdfs:label "EU-wide"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA-001
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA-001> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SafetyAlert> ;
+                                                                              <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/addressesIncident> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/INC-001> ;
+                                                                              <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/countries_affected> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/EU-wide> ;
+                                                                              <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasStatus> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Open> ;
+                                                                              <http://purl.org/dc/terms/identifier> "EU-FSCA-2024-000001" ;
+                                                                              <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/action_date> "2024-02-01T00:00:00"^^xsd:dateTime ;
+                                                                              <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/devices_affected> 850 ;
+                                                                              <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/scope> "All HeartMate 3 LVAD units implanted since 2020" ;
+                                                                              <http://purl.org/dc/terms/description> "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0." ;
+                                                                              rdfs:comment "Instance representing the Field Safety Corrective Action 001."@en ;
+                                                                              rdfs:label "FSCA-001"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Germany
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Germany> rdf:type owl:NamedIndividual ,
+                                                                                      <http://schema.org/Country> ;
+                                                                             rdfs:comment "Instance representing the country Germany."@en ;
+                                                                             rdfs:label "Germany"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/HPRA
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/HPRA> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CompetentAuthority> ;
+                                                                          rdfs:comment "Instance representing Health Products Regulatory Authority."@en ;
+                                                                          rdfs:label "HPRA"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/INC-001
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/INC-001> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/country_reported> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Germany> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRisk> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RSK-003> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportedBy> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MAN-001> ;
+                                                                             <http://purl.org/dc/terms/identifier> "EU-INC-2024-000001" ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/detectionDate> "2024-01-10T00:00:00"^^xsd:dateTime ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eventDate> "2024-01-08T00:00:00"^^xsd:dateTime ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/outcome> "Serious patient injury - embolic stroke" ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_age> 17 ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_sex> "Male" ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportDate> "2024-01-15T00:00:00"^^xsd:dateTime ;
+                                                                             <http://purl.org/dc/terms/description> "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography." ;
+                                                                             rdfs:comment "Instance representing the INC-001 incident."@en ;
+                                                                             rdfs:label "INC-001"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/IVDR
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/IVDR> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/IVDR> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InjuryRisk
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InjuryRisk> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InjuryRisk> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Ireland
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Ireland> rdf:type owl:NamedIndividual ,
+                                                                                      <http://schema.org/Country> ;
+                                                                             rdfs:comment "Instance representing the country Ireland."@en ;
+                                                                             rdfs:label "Ireland"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Low
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Low> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Probability> ;
+                                                                         rdfs:comment "Individual representing a low probability level."@en ;
+                                                                         rdfs:label "Low"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MAN-001
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MAN-001> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasCountry> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Ireland> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/regulatedBy> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/HPRA> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/authorization_number> "IE/2017/001234" ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eudamed_srn> "SRN-IE-MED-0001" ;
+                                                                             <http://xmlns.com/foaf/0.1/mbox> "regulatory@medtronic.com" ;
+                                                                             <http://xmlns.com/foaf/0.1/name> "Medtronic plc" ;
+                                                                             rdfs:comment "Instance representing the manufacturer MAN-001."@en ;
+                                                                             rdfs:label "MAN-001"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR> .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Open
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Open> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Status> ;
+                                                                          rdfs:comment "Individual representing a open status."@en ;
+                                                                          rdfs:label "Open"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Patient_Harm
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Patient_Harm> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory> ;
+                                                                                  rdfs:comment "Individual representing the patient harm risk category."@en ;
+                                                                                  rdfs:label "Patient Harm"@en .
+
+
+###  http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RSK-003
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RSK-003> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InjuryRisk> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/affectsDeviceType> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DEV-001> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasProbability> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Low> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRiskCategory> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Patient_Harm> ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasSeverity> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Critical> ;
+                                                                             <http://purl.org/dc/terms/identifier> "A0201" ;
+                                                                             <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/risk_name> "Thrombosis - device-related" ;
+                                                                             rdfs:comment "Instance representing the risk RSK-003."@en ;
+                                                                             rdfs:label "RSK-003"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/description> rdfs:comment "A descriptive text explaining the resource"@en ,
+                                                    "http://purl.org/dc/terms/" ;
+                                       rdfs:label "Description"@en .
+
+
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII> rdfs:comment "High-risk medical devices, typically those that support or sustain life, are implanted, or present a potential significant risk of illness or injury."@en ;
+                                                                              rdfs:label "Class III"@en .
+
+
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/IVDR> rdfs:comment "Regulation (EU) 2017/746 of the European Parliament and of the Council on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU."@en ;
+                                                                          rdfs:label "IVDR (In Vitro Diagnostic Medical Devices Regulation)"@en .
+
+
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice> rdfs:comment "Device that can be inserted inside the human body."@en ;
+                                                                                             rdfs:label "Implantable Active Device"@en .
+
+
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InjuryRisk> rdfs:comment "Risk of physical trauma or damage to the human body associated with device operation or failure."@en ;
+                                                                                rdfs:label "Injury Risk"@en .
+
+
+<http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR> rdfs:comment "Regulation (EU) 2017/745 of the European Parliament and of the Council on medical devices, amending Directive 2001/83/EC, Regulation (EC) No 178/2002 and Regulation (EC) No 1223/2009."@en ;
+                                                                         rdfs:label "MDR (Medical Device Regulation)"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassC>
+                <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassD>
+                <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII>
+                <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIIa>
+                <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIIb>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InSituCorrection>
+                <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Recall>
+                <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/UserNotice>
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#age> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#m> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/addressesIncident> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#i>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/country_reported> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/countries_affected> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_age> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#age>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#age> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 18 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasSeverity> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Critical>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#m>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasCountry> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#m> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasCountry> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#m>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,2842 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
+    "title" : {
+      "en" : "Medical Devices Ontology"
+    },
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "description" : {
+      "en" : "This ontology includes medical devices, catalogued within the regulatory frameworks European MDR (EU 2017/745) and IVDR (EU 2017/746). Its purpose is to represent medical devices, their manufacturers, risks, incidents and corrective actions."
+    },
+    "labels" : {
+      "en" : "Medical Devices Ontology"
+    },
+    "comments" : {
+      "en" : "Ontology for incidents, risk and actions related to medical devices."
+    },
+    "other" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Miguel Ángel Barnés Torrente",
+        "type" : "label"
+      }, {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Medical Devices Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskClass",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskClass",
+      "en" : "Risk Class"
+    },
+    "subClasses" : [ "1", "2", "3", "4", "5" ],
+    "comment" : {
+      "en" : "The regulatory classification assigned to a medical device based on its intended purpose and inherent risks, determining the level of oversight required."
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://schema.org/Legislation",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Legislation",
+      "en" : "Legislation"
+    },
+    "subClasses" : [ "7" ],
+    "comment" : {
+      "en" : "A set of laws."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CibersecurityRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CibersecurityRisk",
+      "en" : "Cybersecurity Risk"
+    },
+    "comment" : {
+      "en" : "Risk associated with vulnerabilities in the network or software of a medical device that could lead to unauthorized access or malfunction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Device",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Device",
+      "en" : "Device"
+    },
+    "subClasses" : [ "12", "13", "14", "15", "16", "17", "18" ],
+    "comment" : {
+      "en" : "A medical device."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InterferenceRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterferenceRisk",
+      "en" : "Interference Risk"
+    },
+    "comment" : {
+      "en" : "Risk that the device's function is disrupted by external factors, such as electromagnetic fields."
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/PatientHarm",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PatientHarm",
+      "en" : "Patient Harm"
+    },
+    "comment" : {
+      "en" : "A specific risk category that measures the direct negative impact on a patient's health status."
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Risk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Risk",
+      "en" : "Risk"
+    },
+    "subClasses" : [ "8", "34", "35", "36", "37", "21", "38", "39", "40", "41" ],
+    "comment" : {
+      "en" : "Combination of the probability of occurrence of harm and the severity of that harm."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://schema.org/Place",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Place",
+      "en" : "Place"
+    },
+    "subClasses" : [ "48" ],
+    "comment" : {
+      "en" : "A physical location."
+    },
+    "attributes" : [ "external" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RegulatoryFramework",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegulatoryFramework",
+      "en" : "Regulatory Framework"
+    },
+    "subClasses" : [ "50", "51" ],
+    "comment" : {
+      "en" : "The set of rules, laws, and regulations that govern the manufacturing, registration, and safety monitoring of medical devices within a specific jurisdiction, such as the European Union."
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InSituCorrection",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InSituCorrection",
+      "en" : "In-Situ Correction"
+    },
+    "comment" : {
+      "en" : "A corrective action performed on the device at the location where it is used, without the need for its return to the manufacturer."
+    },
+    "attributes" : [ "external" ],
+    "id" : "53",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://schema.org/Event",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "subClasses" : [ "23" ],
+    "comment" : {
+      "en" : "An event happening at a certain time and location."
+    },
+    "attributes" : [ "external" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ProductQuality",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductQuality",
+      "en" : "Product Quality"
+    },
+    "comment" : {
+      "en" : "Category of risk related to manufacturing defects, packaging failures, or lack of batch consistency."
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RadiationRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiationRisk",
+      "en" : "Radiation Risk"
+    },
+    "comment" : {
+      "en" : "Risk associated with the emission of ionizing or non-ionizing radiation from the medical device."
+    },
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://schema.org/Organization",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization"
+    },
+    "subClasses" : [ "32", "62" ],
+    "comment" : {
+      "en" : "A public or private organization."
+    },
+    "attributes" : [ "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SelfTestDevice",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SelfTestDevice",
+      "en" : "Self Test Device"
+    },
+    "comment" : {
+      "en" : "Device to be used at home"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://schema.org/QualitativeValue",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "QualitativeValue",
+      "en" : "Qualitative Value"
+    },
+    "subClasses" : [ "71", "66" ],
+    "comment" : {
+      "en" : "A predefined qualitative value for a characteristic."
+    },
+    "attributes" : [ "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MalfunctionRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MalfunctionRisk",
+      "en" : "Malfunction Risk"
+    },
+    "comment" : {
+      "en" : "Risk that the device does not operate as intended due to internal technical defects or software errors."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RiskCategory",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskCategory",
+      "en" : "Risk Category"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Patient_Harm",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Individual representing the patient harm risk category."
+      },
+      "labels" : {
+        "IRI-based" : "Patient_Harm",
+        "en" : "Patient Harm"
+      }
+    } ],
+    "subClasses" : [ "57", "72", "73", "74", "26", "75" ],
+    "comment" : {
+      "en" : "General classification of risk types, such as device performance, safety, or patient harm."
+    },
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://schema.org/ActionStatusType",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ActionStatusType",
+      "en" : "Action Status Type"
+    },
+    "subClasses" : [ "77" ],
+    "comment" : {
+      "en" : "The specific status of an action."
+    },
+    "attributes" : [ "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/IVDR",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "IVDR",
+      "en" : "IVDR (In Vitro Diagnostic Medical Devices Regulation)"
+    },
+    "comment" : {
+      "en" : "Regulation (EU) 2017/746 of the European Parliament and of the Council on in vitro diagnostic medical devices and repealing Directive 98/79/EC and Commission Decision 2010/227/EU."
+    },
+    "attributes" : [ "external" ],
+    "id" : "51",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Status",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Status",
+      "en" : "Status"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Close",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Individual representing a closed status."
+      },
+      "labels" : {
+        "IRI-based" : "Close",
+        "en" : "Close"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Open",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Individual representing a open status."
+      },
+      "labels" : {
+        "IRI-based" : "Open",
+        "en" : "Open"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Current state of a Field Safety Corrective Action, such as Open, Closed, or Pending."
+    },
+    "attributes" : [ "external" ],
+    "id" : "77",
+    "superClasses" : [ "76" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/CompetentAuthority",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompetentAuthority",
+      "en" : "Competent Authority"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/HPRA",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Instance representing Health Products Regulatory Authority."
+      },
+      "labels" : {
+        "IRI-based" : "HPRA",
+        "en" : "HPRA"
+      }
+    } ],
+    "comment" : {
+      "en" : "The national body responsible for the registration and supervision of medical devices and manufacturers within its jurisdiction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "62",
+    "superClasses" : [ "61" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DeviceFailure",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceFailure",
+      "en" : "Device Failure"
+    },
+    "comment" : {
+      "en" : "A category of risk where the device fails to perform its intended function or meet its specifications."
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassC",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassC",
+      "en" : "Class C"
+    },
+    "comment" : {
+      "en" : "High individual risk and/or moderate public health risk in vitro diagnostic devices, such as those used for genetic testing or cancer screening."
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassD",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassD",
+      "en" : "Class D"
+    },
+    "comment" : {
+      "en" : "High individual risk and high public health risk in vitro diagnostic devices, typically used for detecting life-threatening infectious diseases in blood supply."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SoftwareRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoftwareRisk",
+      "en" : "Software Risk"
+    },
+    "comment" : {
+      "en" : "Risk related to software bugs, algorithm failures, or data processing errors in active devices."
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MaterialRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialRisk",
+      "en" : "Material Risk"
+    },
+    "comment" : {
+      "en" : "Risk associated with the materials used in the device, including toxicity, degradation, or biocompatibility issues."
+    },
+    "attributes" : [ "external" ],
+    "id" : "37",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableActiveDevice",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "ImplantableActiveDevice",
+      "en" : "Implantable Active Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DEV-001",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "description" : {
+        "undefined" : "Thrombus formation on device surface causing embolic events"
+      },
+      "comment" : {
+        "en" : "Instance of DEV-001 device"
+      },
+      "labels" : {
+        "IRI-based" : "DEV-001",
+        "en" : "DEV-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Device that can be inserted inside the human body."
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MDR",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "MDR",
+      "en" : "MDR (Medical Device Regulation)"
+    },
+    "comment" : {
+      "en" : "Regulation (EU) 2017/745 of the European Parliament and of the Council on medical devices, amending Directive 2001/83/EC, Regulation (EC) No 178/2002 and Regulation (EC) No 1223/2009."
+    },
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ActiveImplant",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveImplant",
+      "en" : "Active Implant"
+    },
+    "comment" : {
+      "en" : "An active device that is also implantable."
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Recall",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recall",
+      "en" : "Recall"
+    },
+    "comment" : {
+      "en" : "Any measure aimed at achieving the return of a device that has already been made available to the end user."
+    },
+    "attributes" : [ "external" ],
+    "id" : "91",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "92",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Manufacturer",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "en" : "Manufacturer"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/MAN-001",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Instance representing the manufacturer MAN-001."
+      },
+      "labels" : {
+        "IRI-based" : "MAN-001",
+        "en" : "MAN-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Natural or legal person who manufactures or fully refurbishes a device and markets it under their name or trademark."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "61" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Probability",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Probability",
+      "en" : "Probability"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Low",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Individual representing a low probability level."
+      },
+      "labels" : {
+        "IRI-based" : "Low",
+        "en" : "Low"
+      }
+    } ],
+    "comment" : {
+      "en" : "The likelihood of a specific risk occurring during the use of a medical device."
+    },
+    "attributes" : [ "external" ],
+    "id" : "66",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://schema.org/Action",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Action",
+      "en" : "Action"
+    },
+    "subClasses" : [ "47" ],
+    "comment" : {
+      "en" : "An action performed by an individual."
+    },
+    "attributes" : [ "external" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DeviceSafety",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceSafety",
+      "en" : "Device Safety"
+    },
+    "comment" : {
+      "en" : "Risk category focusing on the potential for the device to cause physical harm or injury during normal use."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InVitroDiagnosticDevice",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InVitroDiagnosticDevice",
+      "en" : "In Vitro Diagnostic Device"
+    },
+    "comment" : {
+      "en" : "A device used in vitro for the examination of specimens."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DiagnosticRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiagnosticRisk",
+      "en" : "Diagnostic Risk"
+    },
+    "comment" : {
+      "en" : "Risk related to incorrect or delayed results from diagnostic devices that may lead to inappropriate medical decisions."
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "9" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "10", "32" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DiagnosticError",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiagnosticError",
+      "en" : "Diagnostic Error"
+    },
+    "comment" : {
+      "en" : "Risk arising from incorrect or misleading diagnostic information provided by the device."
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FSCA",
+      "en" : "Field Safety Corrective Action"
+    },
+    "subClasses" : [ "99", "91", "53", "109" ],
+    "comment" : {
+      "en" : "Corrective action taken by a manufacturer for technical or medical reasons to prevent or reduce the risk of a serious incident."
+    },
+    "attributes" : [ "external" ],
+    "id" : "47",
+    "superClasses" : [ "95" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIIb",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIIb",
+      "en" : "Class IIb"
+    },
+    "comment" : {
+      "en" : "Medium-high risk medical devices, often including more complex implants or long-term invasive devices, subject to stricter assessment."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIIa",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIIa",
+      "en" : "Class IIa"
+    },
+    "comment" : {
+      "en" : "Medium-risk medical devices, including some diagnostic and therapeutic tools, that require a moderate level of monitoring and certification."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "114",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "118",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "47", "9", "23" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "119"
+  }, {
+    "instances" : 0,
+    "union" : [ "47", "23", "9", "10" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SingleUseDevice",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleUseDevice",
+      "en" : "Single Use Device"
+    },
+    "comment" : {
+      "en" : "The device can only be used one time."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://schema.org/Product",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Product",
+      "en" : "Product"
+    },
+    "subClasses" : [ "10" ],
+    "comment" : {
+      "en" : "Any offered product, service, or manufactured good."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Incident",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Incident",
+      "en" : "Incident"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/INC-001",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "description" : {
+        "undefined" : "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography."
+      },
+      "comment" : {
+        "en" : "Instance representing the INC-001 incident."
+      },
+      "labels" : {
+        "IRI-based" : "INC-001",
+        "en" : "INC-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Any malfunction or deterioration in the characteristics or performance of a device made available on the market.e"
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "127",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "113",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "128",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "129",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ClassIII",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "ClassIII",
+      "en" : "Class III"
+    },
+    "comment" : {
+      "en" : "High-risk medical devices, typically those that support or sustain life, are implanted, or present a potential significant risk of illness or injury."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "111",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://schema.org/Country",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Country",
+      "en" : "Country"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Ireland",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Instance representing the country Ireland."
+      },
+      "labels" : {
+        "IRI-based" : "Ireland",
+        "en" : "Ireland"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Germany",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Instance representing the country Germany."
+      },
+      "labels" : {
+        "IRI-based" : "Germany",
+        "en" : "Germany"
+      }
+    } ],
+    "comment" : {
+      "en" : "A distinct nation with its own government."
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Severity",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Severity",
+      "en" : "Severity"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/Critical",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Individual representing a critical severity level."
+      },
+      "labels" : {
+        "IRI-based" : "Critical",
+        "en" : "Critical"
+      }
+    } ],
+    "comment" : {
+      "en" : "A measure of the possible consequences of a hazard or a specific risk."
+    },
+    "attributes" : [ "external" ],
+    "id" : "71",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/DevicePerformance",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DevicePerformance",
+      "en" : "Device Performance"
+    },
+    "comment" : {
+      "en" : "Risk related to the effectiveness or functional output of the device compared to its intended use."
+    },
+    "attributes" : [ "external" ],
+    "id" : "73",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ContaminationRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContaminationRisk",
+      "en" : "Contamination Risk"
+    },
+    "comment" : {
+      "en" : "Risk of biological, chemical, or particulate contamination that may affect the safety or performance of the device."
+    },
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/SafetyAlert",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SafetyAlert",
+      "en" : "Safety Alert"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/FSCA-001",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "description" : {
+        "undefined" : "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0."
+      },
+      "comment" : {
+        "en" : "Instance representing the Field Safety Corrective Action 001."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA-001",
+        "en" : "FSCA-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "An alert warning a safety hazard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "109",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InjuryRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "InjuryRisk",
+      "en" : "Injury Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/RSK-003",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Instance representing the risk RSK-003."
+      },
+      "labels" : {
+        "IRI-based" : "RSK-003",
+        "en" : "RSK-003"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk of physical trauma or damage to the human body associated with device operation or failure."
+    },
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ImplantableDevice",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableDevice",
+      "en" : "Implantable Device"
+    },
+    "comment" : {
+      "en" : "A device intended to be totally introduced into the human body."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://schema.org/AdministrativeArea",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AdministrativeArea",
+      "en" : "Administrative Area"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/EU-wide",
+      "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+      "comment" : {
+        "en" : "Instance representing the European Union region."
+      },
+      "labels" : {
+        "IRI-based" : "EU-wide",
+        "en" : "EU-wide"
+      }
+    } ],
+    "subClasses" : [ "60" ],
+    "comment" : {
+      "en" : "A geographical region under the jurisdiction of a government."
+    },
+    "attributes" : [ "external" ],
+    "id" : "48",
+    "superClasses" : [ "49" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/UserNotice",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UserNotice",
+      "en" : "User Notice"
+    },
+    "comment" : {
+      "en" : "Communication sent by a manufacturer to users or customers in relation to a Field Safety Corrective Action."
+    },
+    "attributes" : [ "external" ],
+    "id" : "99",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/InfectionRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InfectionRisk",
+      "en" : "Infection Risk"
+    },
+    "comment" : {
+      "en" : "Risk of clinical infection to the patient or user resulting from the use or contamination of the device."
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/ActiveDevice",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveDevice",
+      "en" : "Active Device"
+    },
+    "comment" : {
+      "en" : "A device that relies on a source of electrical energy."
+    },
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "10" ]
+  } ],
+  "property" : [ {
+    "id" : "19",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "100",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "101",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "102",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "103",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "106",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "120",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "121",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "122",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "123",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "124",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "146",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "147",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "150",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "154",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "158",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "164",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "165",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "166",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "167",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "168",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "169",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "170",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "171",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "172",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "175",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "179",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "182",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "184",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "185",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "187",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "189",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "191",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/risk_name",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "risk_name",
+      "en" : "risk name"
+    },
+    "cardinality" : "1",
+    "domain" : "9",
+    "comment" : {
+      "en" : "The name of the risk."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/detectionDate",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "detectionDate",
+      "en" : "detection date"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The date when the device malfunction was detected."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/involvesDevice",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "involvesDevice",
+      "en" : "involves device"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Links a safety incident or a corrective action to the physical medical device involved in the event."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "30",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "cardinality" : "1",
+    "domain" : "29",
+    "comment" : {
+      "en" : "A name for an entity."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/authorization_number",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "authorization_number",
+      "en" : "authorization number"
+    },
+    "cardinality" : "1",
+    "domain" : "32",
+    "comment" : {
+      "en" : "The authorization number assigned to the manufacturer."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_reusable",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "is_reusable",
+      "en" : "is reusable"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "en" : "Tells if the device is intended to be reused."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eudamed_srn",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "eudamed_srn",
+      "en" : "eudamed srn"
+    },
+    "cardinality" : "1",
+    "domain" : "32",
+    "comment" : {
+      "en" : "The number assigned to the manufacturer in the EUDAMED database."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/countries_affected",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "countries_affected",
+      "en" : "countries affected"
+    },
+    "domain" : "47",
+    "comment" : {
+      "en" : "Relates a Field Safety Corrective Action (FSCA) to the specific countries where the action is being implemented."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRiskCategory",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasRiskCategory",
+      "en" : "has risk category"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Classifies a Risk into a specific functional category, such as Device Failure or Patient Harm."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_ivd",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "is_ivd",
+      "en" : "is in vitro diagnostic"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "en" : "Tells if the device is intended for in vitro diagnostic."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRisk",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasRisk",
+      "en" : "has risk"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Associates a medical device with a potential hazard or risk identified during its lifecycle."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/country_reported",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "country_reported",
+      "en" : "country reported"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "The specific country where an incident was officially identified and reported to the authorities."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/closure_date",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "closure_date",
+      "en" : "closure date"
+    },
+    "maxCardinality" : "1",
+    "domain" : "47",
+    "comment" : {
+      "en" : "The date when the Field Safety Corrective Action was closed."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasProbability",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "hasProbability",
+      "en" : "has probability"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Links a specific Risk to its estimated likelihood of occurrence (e.g., Low, Medium, High)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "69",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "cardinality" : "1",
+    "domain" : "68",
+    "comment" : {
+      "en" : "A identifier for the resource."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/udi_di",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "udi_di",
+      "en" : "udi di"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "en" : "A device identifier."
+    },
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/devices_affected",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "devices_affected",
+      "en" : "devices affected"
+    },
+    "cardinality" : "1",
+    "domain" : "47",
+    "comment" : {
+      "en" : "Number of devices affected by an incident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_active",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "is_active",
+      "en" : "is active"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "en" : "Tells if the device depends on a source of power."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/action_date",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "action_date",
+      "en" : "action date"
+    },
+    "cardinality" : "1",
+    "domain" : "47",
+    "comment" : {
+      "en" : "The date when the Field Safety Corrective Action was initiated or performed."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/addressesIncident",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "addressesIncident",
+      "en" : "addresses incident"
+    },
+    "domain" : "47",
+    "comment" : {
+      "en" : "Relates a Field Safety Corrective Action (FSCA) to the specific incident it aims to mitigate or resolve."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRegulatoryFramework",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasRegulatoryFramework",
+      "en" : "has regulatory framework"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Associates a medical device with its applicable legal framework, such as MDR or IVDR."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/affectsDeviceType",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "affectsDeviceType",
+      "en" : "affected device type"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a risk or incident to the specific category or type of medical device that is impacted."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/eventDate",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "eventDate",
+      "en" : "event date"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The date when the incident occurred."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/corrective_action_taken",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "94",
+    "label" : {
+      "IRI-based" : "corrective_action_taken",
+      "en" : "corrective action taken"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "Tells if a corrective action has been implemented."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "96"
+  }, {
+    "range" : "99",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
+  }, {
+    "range" : "91",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/regulatedBy",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "regulatedBy",
+      "en" : "regulated by"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Relates a medical device or manufacturer to the specific regulatory framework (MDR/IVDR) it must comply with."
+    },
+    "attributes" : [ "allValues", "object", "functional", "external" ],
+    "id" : "101"
+  }, {
+    "range" : "99",
+    "domain" : "91",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/regulatedBy",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "regulatedBy",
+      "en" : "regulated by"
+    },
+    "domain" : "62",
+    "comment" : {
+      "en" : "Relates a medical device or manufacturer to the specific regulatory framework (MDR/IVDR) it must comply with."
+    },
+    "attributes" : [ "allValues", "object", "functional", "external" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportedBy",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "reportedBy",
+      "en" : "reported by"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Relates an Incident to the manufacturer or entity responsible for submitting the official safety report."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "104"
+  }, {
+    "range" : "50",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasStatus",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "hasStatus",
+      "en" : "has status"
+    },
+    "domain" : "47",
+    "comment" : {
+      "en" : "Indicates the current stage of a Field Safety Corrective Action, such as Open, Closed, or Pending."
+    },
+    "attributes" : [ "someValues", "object", "functional", "external" ],
+    "id" : "106"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "107"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_age",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "111",
+    "label" : {
+      "IRI-based" : "patient_age",
+      "en" : "patient age"
+    },
+    "maxCardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The age of the patient."
+    },
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/reportDate",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "113",
+    "label" : {
+      "IRI-based" : "reportDate",
+      "en" : "report date"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The date when the incident was reported."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasCountry",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "hasCountry",
+      "en" : "has country"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Links a manufacturer or an incident report to the specific country or geographical region involved."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/scope",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "scope",
+      "en" : "scope"
+    },
+    "domain" : "47",
+    "comment" : {
+      "en" : "The range actions in a Field Safety Corrective Action."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "116"
+  }, {
+    "domain" : "15",
+    "range" : "15",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "43",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "51",
+    "range" : "51",
+    "id" : "121",
+    "label" : {
+      "IRI-based" : "42",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "50",
+    "range" : "50",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "45",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "40",
+    "range" : "40",
+    "id" : "123",
+    "label" : {
+      "IRI-based" : "44",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "5",
+    "range" : "5",
+    "id" : "124",
+    "label" : {
+      "IRI-based" : "41",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/date",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "97",
+    "label" : {
+      "IRI-based" : "date",
+      "en" : "date"
+    },
+    "domain" : "114",
+    "comment" : {
+      "en" : "A general date."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasStatus",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "hasStatus",
+      "en" : "has status"
+    },
+    "domain" : "47",
+    "comment" : {
+      "en" : "Indicates the current stage of a Field Safety Corrective Action, such as Open, Closed, or Pending."
+    },
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "126"
+  }, {
+    "range" : "9",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
+  }, {
+    "range" : "9",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "9",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasManufacturer",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasManufacturer",
+      "en" : "has manufacturer"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "The relationship between a medical device and the legal entity responsible for its design and production."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "133"
+  }, {
+    "range" : "9",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "9",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "range" : "47",
+    "domain" : "109",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
+  }, {
+    "range" : "47",
+    "domain" : "99",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
+  }, {
+    "range" : "95",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "139"
+  }, {
+    "range" : "47",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "140"
+  }, {
+    "range" : "47",
+    "domain" : "91",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "141"
+  }, {
+    "range" : "10",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "142"
+  }, {
+    "range" : "10",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "10",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "10",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/intended_purpose",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "intended_purpose",
+      "en" : "intended purpose"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "en" : "The use intended for a device."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "146"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasSeverity",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "hasSeverity",
+      "en" : "has severity"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a Risk to the magnitude of its potential consequences or impact on health."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "147"
+  }, {
+    "range" : "10",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "range" : "10",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://purl.org/dc/terms/description",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "118",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "Description"
+    },
+    "cardinality" : "1",
+    "domain" : "119",
+    "comment" : {
+      "en" : "A descriptive text explaining the resource",
+      "undefined" : "http://purl.org/dc/terms/"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "150"
+  }, {
+    "range" : "10",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
+  }, {
+    "range" : "0",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "range" : "0",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
+  }, {
+    "range" : "6",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "154"
+  }, {
+    "range" : "0",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "155"
+  }, {
+    "range" : "76",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "156"
+  }, {
+    "range" : "27",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "157"
+  }, {
+    "range" : "48",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "range" : "27",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "159"
+  }, {
+    "range" : "27",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "range" : "27",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/patient_sex",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "129",
+    "label" : {
+      "IRI-based" : "patient_sex",
+      "en" : "patient sex"
+    },
+    "maxCardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The sex of the patient."
+    },
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "162"
+  }, {
+    "range" : "2",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "163"
+  }, {
+    "range" : "1",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "164"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "165"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "166"
+  }, {
+    "range" : "1",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "167"
+  }, {
+    "range" : "2",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "168"
+  }, {
+    "range" : "1",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "169"
+  }, {
+    "range" : "1",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "170"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "171"
+  }, {
+    "range" : "5",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "172"
+  }, {
+    "range" : "70",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "range" : "70",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "174"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/is_implantable",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "92",
+    "label" : {
+      "IRI-based" : "is_implantable",
+      "en" : "is implantable"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "en" : "Tells if the device is intended to be into the human body."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "175"
+  }, {
+    "range" : "27",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "176"
+  }, {
+    "range" : "27",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "177"
+  }, {
+    "range" : "54",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "178"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/mbox",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "127",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "mbox",
+      "en" : "Email Address"
+    },
+    "cardinality" : "1",
+    "domain" : "32",
+    "comment" : {
+      "en" : "A email address."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "179"
+  }, {
+    "range" : "7",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "180"
+  }, {
+    "range" : "61",
+    "domain" : "62",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "181"
+  }, {
+    "range" : "61",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "182"
+  }, {
+    "range" : "7",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "183"
+  }, {
+    "range" : "49",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "184"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/outcome",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "128",
+    "label" : {
+      "IRI-based" : "outcome",
+      "en" : "outcome"
+    },
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "The result of an incident."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "185"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "186"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/hasRiskClass",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasRiskClass",
+      "en" : "has risk class"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Connects a device to its regulatory risk classification."
+    },
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "187"
+  }, {
+    "range" : "9",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "188"
+  }, {
+    "range" : "9",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "189"
+  }, {
+    "range" : "9",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "190"
+  }, {
+    "iri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology/regulatedBy",
+    "baseIri" : "http://www.semanticweb.org/migue/ontologies/MedicalDevicesOntology",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "regulatedBy",
+      "en" : "regulated by"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Relates a medical device or manufacturer to the specific regulatory framework (MDR/IVDR) it must comply with."
+    },
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "191"
+  }, {
+    "range" : "9",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "192"
+  } ]
+}
